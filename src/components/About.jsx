@@ -4,30 +4,23 @@ export const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-[#040F0F] text-[#FCFFFC]">
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-[#248232]">
+        <div className="max-w-[1000px] w-full px-4">
+          <div className="pb-3">
+            <p className="text-4xl font-bold inline border-b-4 border-[#040F0F] text-[#040F0F]">
               About
             </p>
-          </div>
-          <div></div>
-        </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-7 px-5 divide-x-2 divide-[#248232]">
-          <div className="sm:text-right text-4xl font-bold sm:pt-7">
-            <p>Hello, i'm Oliver. Feel free to explore and learn more about my work.</p>
-          </div>
-          <div className="pl-6">
-            <p className="pb-1">
-              I am a creative, patient and resourceful individual striving to
-              start a career in software development.
+            <p className="py-4 text-[#040F0F]">
+              {"// Debugging on Aldi Red Label, one cup at a time..."}
             </p>
-            <p className="pb-1">
-              I pick up new concepts quickly and relish in the discomfort that
-              complex problems generate.
+          </div>
+
+          <div className="bg-[#040F0F] p-8 hover:scale-105 transition-transform duration-300">
+            <p className="text-4xl font-bold pb-6">Hello, I'm Oliver.</p>
+            <p className="text-lg pb-4">
+              I'm a Full Stack Developer based in Greater Manchester, specialising in building React frontends and Node.js/Express RESTful APIs with PostgreSQL databases. I also have experience in mobile development using React Native and full testing coverage across the stack using Jest, Supertest, Vitest, React Testing Library and Cypress.
             </p>
-            <p>
-              Adopting a growth mindset encourages me to embrace blockages in my
-              solutions as the most vital opportunities to learn and develop.
+            <p className="text-lg">
+              What draws me to development is the ability to break down any challenge into smaller tasks and chip away at it. Bugs and errors are just the next thing to learn!
             </p>
           </div>
         </div>
