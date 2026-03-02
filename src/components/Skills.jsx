@@ -11,6 +11,13 @@ import Tailwind from "../assets/tailwind.png";
 import ExpressJS from "../assets/express.png";
 import Jest from "../assets/jest.png";
 import APImg from "../assets/api.png";
+import Csharp from "../assets/csharp.png";
+import Cypress from "../assets/cypress.png";
+import Mongodb from "../assets/mongodb.png";
+import ReactTeastingLibrary from "../assets/reacttestinglib.png";
+import Typescript from "../assets/typescript_original_logo_icon_146317.png";
+import Ubuntu from "../assets/ubuntu.png";
+import Vitest from "../assets/vitest.png";
 
 export const Skills = () => {
   const skillsData = [
@@ -25,6 +32,14 @@ export const Skills = () => {
     { name: "RESTful API", icon: APImg },
     { name: "Git", icon: Git },
     { name: "Jest", icon: Jest },
+    { name: "C Sharp" , icon: Csharp },
+    { name: "Cypress" , icon: Cypress },
+    { name: "MongoDB" , icon: Mongodb },
+    { name: "React Testing Library" , icon: ReactTeastingLibrary },
+    { name: "TypeScript" , icon: Typescript },
+    { name: "Ubuntu (Linux)" , icon: Ubuntu },
+    { name: "Vitest" , icon: Vitest },
+    
   ];
 
   return (
