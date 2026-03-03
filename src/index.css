@@ -8,6 +8,7 @@
 @layer body {
     body{
     @apply font-abc;
+    background-color: #040F0F;
     }
     li{
         @apply px-4;
