@@ -74,7 +74,8 @@ export const Skills = () => {
   return (
     <div
       name="skills"
-      className="w-full bg-[#040F0F] text-[#FCFFFC] py-20 scroll-mt-96"
+      id="skills"
+      className="w-full bg-[#040F0F] text-[#FCFFFC] py-20 scroll-mt-20"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">

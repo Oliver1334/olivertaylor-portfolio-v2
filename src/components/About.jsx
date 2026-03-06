@@ -2,7 +2,7 @@ import React from "react";
 
 export const About = () => {
   return (
-    <div name="about" className="w-full h-screen bg-[#040F0F] text-[#FCFFFC]">
+    <div name="about" id="about" className="w-full h-screen bg-[#040F0F] text-[#FCFFFC]">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full px-4">
           <div className="bg-[#040F0F] p-8 hover:scale-105 transition-transform duration-300">
