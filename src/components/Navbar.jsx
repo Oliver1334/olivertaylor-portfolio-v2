@@ -131,60 +131,118 @@ export const Navbar = () => {
         }`} //template literal to access isOpen here for ternary operator
       >
         <li className="py-6 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="home"
-            smooth={true}
-            duration={500}
-            className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
-          >
-            Home
-          </Link>
+          {isOnBlog ? (
+            <a
+              href="/#home"
+              onClick={handleClick}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Home
+            </a>
+          ) : (
+            <Link
+              onClick={handleClick}
+              to="home"
+              smooth={true}
+              duration={500}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Home
+            </Link>
+          )}
         </li>
         <li className="py-6 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="about"
-            smooth={true}
-            duration={500}
-            className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
-          >
-            About
-          </Link>
+          {isOnBlog ? (
+            <a
+              href="/#about"
+              onClick={handleClick}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              About
+            </a>
+          ) : (
+            <Link
+              onClick={handleClick}
+              to="about"
+              smooth={true}
+              duration={500}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              About
+            </Link>
+          )}
         </li>
         <li className="py-6 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="skills"
-            smooth={true}
-            duration={500}
-            offset={0}
-            className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
-          >
-            Technical Skills
-          </Link>
+          {isOnBlog ? (
+            <a
+              href="/#skills"
+              onClick={handleClick}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Technical Skills
+            </a>
+          ) : (
+            <Link
+              onClick={handleClick}
+              to="skills"
+              smooth={true}
+              duration={500}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Technical Skills
+            </Link>
+          )}
         </li>
         <li className="py-6 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="projects"
-            smooth={true}
-            duration={500}
-            className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
-          >
-            Projects
-          </Link>
+          {isOnBlog ? (
+            <a
+              href="/#projects"
+              onClick={handleClick}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Projects
+            </a>
+          ) : (
+            <Link
+              onClick={handleClick}
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Projects
+            </Link>
+          )}
         </li>
         <li className="py-6 text-4xl">
-          <Link
+          <RouterLink
+            to="/blog"
             onClick={handleClick}
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300 "
+            className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
           >
-            Contact
-          </Link>
+            Dev Blog
+          </RouterLink>
+        </li>
+        <li className="py-6 text-4xl">
+          {isOnBlog ? (
+            <a
+              href="/#contact"
+              onClick={handleClick}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Contact
+            </a>
+          ) : (
+            <Link
+              onClick={handleClick}
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="text-[#FCFFFC] hover:text-[#2BA84A] duration-300"
+            >
+              Contact
+            </Link>
+          )}
         </li>
       </ul>
 
