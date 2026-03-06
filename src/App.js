@@ -10,8 +10,10 @@ import { Weather } from "./components/Weather";
 import { VocabGame } from "./components/VocabGame";
 import { TextBasedRPG } from "./components/TextBasedRPG";
 import { Spacer } from "./components/Spacer";
-import {FooterSpacer} from "./components/FooterSpacer";
-import React, { useEffect, useRef, useState } from "react";
+import { FooterSpacer } from "./components/FooterSpacer";
+import { Blog } from "./components/Blog";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 const RevealOnScroll = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false); // Initial visibility state
@@ -49,33 +51,77 @@ const RevealOnScroll = ({ children }) => {
 };
 
 export const App = () => {
+
+const location = useLocation();
+
+useLayoutEffect(() => {
+if (window.location.hash) {
+  const id = window.location.hash.slice(1);
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView();
+  }
+} else {
+  window.scrollTo(0, 0);
+}
+}, [location])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="bg-[#040F0F]">
       <Navbar />
-      <Home />
-      <RevealOnScroll>
-        <About />
-      </RevealOnScroll>
-      <RevealOnScroll>
-        <Skills />
-      </RevealOnScroll>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              <RevealOnScroll>
+                <About />
+              </RevealOnScroll>
+              <RevealOnScroll>
+                <Skills />
+              </RevealOnScroll>
 
-      <Projects />
-      <Spacer/>
-      <Ncgames />
-      <Spacer/>
-      <FanFinder />
-      <Spacer/>
-      <Weather />
-      <Spacer/>
-      <VocabGame />
-      <Spacer/>
-      <TextBasedRPG />
-      <Spacer/>
-      <RevealOnScroll>
-        <Contact />
-      </RevealOnScroll>
-      <FooterSpacer/>
+              <Projects />
+              <Spacer />
+              <Ncgames />
+              <Spacer />
+              <FanFinder />
+              <Spacer />
+              <Weather />
+              <Spacer />
+              <VocabGame />
+              <Spacer />
+              <TextBasedRPG />
+              <Spacer />
+              <RevealOnScroll>
+                <Contact />
+              </RevealOnScroll>
+            </>
+          }
+        />
+        <Route path="/blog" element={<Blog/>}/>
+      </Routes>
+
+      <FooterSpacer />
     </div>
   );
 };

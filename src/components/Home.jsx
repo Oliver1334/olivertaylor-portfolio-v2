@@ -27,7 +27,7 @@ export const Home = () => {
   const shuffledSkills = shuffleArray([...skills]);
 
   return (
-    <div name='home' className='w-full h-screen bg-[#040F0F]'>
+    <div name='home' id='home' className='w-full h-screen bg-[#040F0F]'>
         
 
   {/* container */}

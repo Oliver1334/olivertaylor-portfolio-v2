@@ -57,6 +57,7 @@ export const Contact = () => {
   return (
     <div
       name="contact"
+      id="contact"
       className="w-full h-screen bg-[#040F0F] flex justify-center items-center p-4 pt-48 pb-12"
     >
       <form
