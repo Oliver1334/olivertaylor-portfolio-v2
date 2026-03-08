@@ -9,7 +9,7 @@ export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const handleClick = () => setOpen(!isOpen);
   const location = useLocation();
-  const isOnBlog = location.pathname === "/blog";
+  const isOnBlog = location.pathname.startsWith("/blog");
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#040F0F] text-[#FCFFFC] z-50">

@@ -52,38 +52,19 @@ const RevealOnScroll = ({ children }) => {
 };
 
 export const App = () => {
+  const location = useLocation();
 
-const location = useLocation();
-
-useLayoutEffect(() => {
-if (window.location.hash) {
-  const id = window.location.hash.slice(1);
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView();
-  }
-} else {
-  window.scrollTo(0, 0);
-}
-}, [location])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  useLayoutEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.slice(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <div className="bg-[#040F0F]">
@@ -119,7 +100,7 @@ if (window.location.hash) {
             </>
           }
         />
-        <Route path="/blog" element={<Blog/>}/>
+        <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
       </Routes>
 
