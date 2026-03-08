@@ -12,6 +12,7 @@ import { TextBasedRPG } from "./components/TextBasedRPG";
 import { Spacer } from "./components/Spacer";
 import { FooterSpacer } from "./components/FooterSpacer";
 import { Blog } from "./components/Blog";
+import { BlogPostPage } from "./components/BlogPostPage";
 import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 
@@ -119,6 +120,7 @@ if (window.location.hash) {
           }
         />
         <Route path="/blog" element={<Blog/>}/>
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
       </Routes>
 
       <FooterSpacer />
