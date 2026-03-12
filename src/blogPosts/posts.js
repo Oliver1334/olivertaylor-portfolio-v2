@@ -1,16 +1,11 @@
-import { BuildingThisSite } from "./BuildingThisSite"
-
-
-
-
-
+import { NCGamesToNDG } from "./NCGamesToNDG"
 
 export const blogPosts = [
     {
         slug: "building-this-site",
-        title: "Building This Site",
+        title: "From NC Games to No Dice Games",
         date: "2026-03-07",
-        excerpt: "This is my first blog post, today i will be talking about how i made this portfolio website with react and tailwind...",
-        component: BuildingThisSite
+        excerpt: "The first rendition of my board games review website 'NC Games' looked like a frontend built by a backend developer...",
+        component: NCGamesToNDG
     }
 ]
