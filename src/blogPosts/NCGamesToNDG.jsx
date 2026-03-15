@@ -63,7 +63,7 @@ export const NCGamesToNDG = () => {
         <p className="text-sm text-gray-400 mb-10">March 16, 2026</p>
 
         <p className="mb-6 leading-relaxed">
-        The first rendition of my board games review website 'NC Games' looked like a frontend built by a backend developer. After getting my backend RESTful API showing a list of endpoints and getting my head around SQL left joins and all that jazz, the prospect of designing a polished, responsive frontend for a user did not excite me. After all the backend work i wanted to get something functional to show the API off and how it works, i didn't want to sit for hours thinking up design choices.
+        The first rendition of my board games review website 'NC Games' looked like a frontend built by a backend developer. After getting my backend RESTful API showing a list of endpoints and getting my head around SQL left joins and all that jazz, the prospect of designing a polished, responsive frontend for a user did not excite me. After all the backend work I wanted to get something functional to show the API off and how it works, I didn't want to sit for hours thinking up design choices.
         </p>
 
         <p className="mb-6 leading-relaxed">
@@ -71,17 +71,17 @@ export const NCGamesToNDG = () => {
         </p>
 
         <p className="mb-6 leading-relaxed">
-        NC Games was functional, but it had no personality or identity. I'm not sure it was even functional for mobile viewing. The logo itself wasn't too shabby, it had energy and character, but none of that carried through to the rest of the UI. Coming back to the 'finished' product i knew something had to change. I wanted to take this functional site and my hacked together job at understanding basic CSS and turn it into something considered, designed and polished. I decided to port the whole project over to Vite and dip my toes into Tailwind CSS, it was time to put some <span className="font-extrabold">-weight: 800</span> behind my fullstack developer title.
+        NC Games was functional, but it had no personality or identity. I'm not sure it was even functional for mobile viewing. The logo itself wasn't too shabby, it had energy and character, but none of that carried through to the rest of the UI. Coming back to the 'finished' product I knew something had to change. I wanted to take this functional site and my hacked together job at understanding basic CSS and turn it into something considered, designed and polished. I decided to port the whole project over to Vite and dip my toes into Tailwind CSS, it was time to put some <span className="font-extrabold">-weight: 800</span> behind my fullstack developer title.
         </p>
 
         <Carousel images={ncGamesImages} />
 
         <p className="mb-6 leading-relaxed">
-        First and foremost i wanted to rebrand the website. Northcoders Games still had some of that bootcamp fuzz stuck to it. I wanted something personal, something unique. I also knew I wanted dice in the logo. So, envisioning the most disappointing outcome in my mind - snake eyes - No Dice Games slithered into existence.
+        First and foremost I wanted to rebrand the website. Northcoders Games still had some of that bootcamp fuzz stuck to it. I wanted something personal, something unique. I also knew I wanted dice in the logo. So, envisioning the most disappointing outcome in my mind - snake eyes - No Dice Games slithered into existence.
         </p>
 
         <p className="mb-6 leading-relaxed">
-        I had my sights set on orange being the primary palette colour, but there was still scheming to be done. Complementing this, i envisioned warm creams, greys, blacks and browns. I took my time using <a href="https://coolors.co/" target="_blank" rel="noreferrer" className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200">Coolors</a> and <a href="https://www.realtimecolors.com/?colors=050315-fbfbfe-2f27ce-dedcff-433bff&fonts=Inter-Inter" target="_blank" rel="noreferrer" className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200">Realtime Colors</a> to refine this palette.
+        I had my sights set on orange being the primary palette colour, but there was still scheming to be done. Complementing this, I envisioned warm creams, greys, blacks and browns. I took my time using <a href="https://coolors.co/" target="_blank" rel="noreferrer" className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200">Coolors</a> and <a href="https://www.realtimecolors.com/?colors=050315-fbfbfe-2f27ce-dedcff-433bff&fonts=Inter-Inter" target="_blank" rel="noreferrer" className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200">Realtime Colors</a> to refine this palette.
         </p>
 
         <p className="mb-6 leading-relaxed">
@@ -93,17 +93,17 @@ export const NCGamesToNDG = () => {
             className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200"
           >
             this tool
-          </a>, I could see that the image was now just code - drawing instructions rendered losslessly and redrawn on the page at any size. This piqued my interest, so i started splitting the instructions apart until i could separate the dice icon from the text, giving me a shortened version to use in the footer and as a favicon. I took the logo further, finding some animated SVGs for a rotating dice loading screen which i'm pretty chuffed with.
+          </a>, I could see that the image was now just code - drawing instructions rendered losslessly and redrawn on the page at any size. This piqued my interest, so I started splitting the instructions apart until I could separate the dice icon from the text, giving me a shortened version to use in the footer and as a favicon. I took the logo further, finding some animated SVGs for a rotating dice loading screen which I'm pretty chuffed with.
         </p>
 
         <p className="mb-6 leading-relaxed">
-          Up until this rebrand i'd never added dark mode to a frontend before. However, the colour palette i had created made dark mode functionality feel like a natural next step. I expected such a feature to involve a convoluted passing of styling state down through every affected component. The reality of using Tailwind was far more elegant. The dark mode toggling all hinges on one class changing inside the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">&lt;html&gt;</code> tag in the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">index.html</code> file. All the theme colours are defined in an <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">@theme</code> block in <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">index.css</code>. Each component throughout the website uses CSS that has both light and dark stylings written into it, for example: <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">bg-brandLight dark:bg-brandDark</code>. When clicking the dark mode button in the navbar the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">dark</code> class is added or removed. What i expected to be the most complex part of the overhaul ended up being one of the most satisfying to implement.
+          Up until this rebrand I'd never added dark mode to a frontend before. However, the colour palette I had created made dark mode functionality feel like a natural next step. I expected such a feature to involve a convoluted passing of styling state down through every affected component. The reality of using Tailwind was far more elegant. The dark mode toggling all hinges on one class changing inside the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">&lt;html&gt;</code> tag in the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">index.html</code> file. All the theme colours are defined in an <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">@theme</code> block in <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">index.css</code>. Each component throughout the website uses CSS that has both light and dark stylings written into it, for example: <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">bg-brandLight dark:bg-brandDark</code>. When clicking the dark mode button in the navbar the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">dark</code> class is added or removed. What I expected to be the most complex part of the overhaul ended up being one of the most satisfying to implement.
         </p>
 
         <Carousel images={noDiceGamesImages} />
 
         <p className="mb-6 leading-relaxed">
-        All in all, this overhaul has taught me a lot more than I expected. SVG manipulation, Tailwind dark mode and thinking about colour as a whole palette rather than choices in isolation now sit snug in my frontend bag of tricks. My dev blog has now been christened with my first blog post ever written, technical or otherwise. Coming up i'll be going into detail about my war on Blazor WebAssembly and finding out if we can really get my C# text-based RPG running in browser. Could you get the chance to be a potential crypt-stalking adventurer? We shall see...
+        All in all, this overhaul has taught me a lot more than I expected. SVG manipulation, Tailwind dark mode and thinking about colour as a whole palette rather than choices in isolation now sit snug in my frontend bag of tricks. My dev blog has now been christened with my first blog post ever written, technical or otherwise. Coming up I'll be going into detail about my war on Blazor WebAssembly and finding out if we can really get my C# text-based RPG running in browser. Could you get the chance to be a potential crypt-stalking adventurer? We shall see...
         </p>
 
       </div>
