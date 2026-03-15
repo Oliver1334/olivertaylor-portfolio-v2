@@ -5,7 +5,7 @@ export const About = () => {
     <div name="about" id="about" className="w-full h-screen bg-[#040F0F] text-[#FCFFFC]">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full px-4">
-          <div className="bg-[#040F0F] p-8 hover:scale-105 transition-transform duration-300">
+          <div className="bg-[#040F0F] p-8 ">
             <p className="text-4xl font-bold pb-6">Hello, I'm Oliver.</p>
             <p className="text-lg pb-4">
               I'm a Full Stack Developer based in Greater Manchester, specialising in building React frontends and Node.js/Express RESTful APIs with PostgreSQL databases. I also have experience in mobile development using React Native and full testing coverage across the stack using Jest, Supertest, Vitest, React Testing Library and Cypress.
