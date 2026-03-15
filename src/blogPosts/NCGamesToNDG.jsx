@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 
+import ndgLogo from "../assets/nodicegameslogo.png";
 import ndg1 from "../assets/NDG1.png";
 import ndg2 from "../assets/NDG2.png";
 import ndg3 from "../assets/NDG3.png";
 import ndg4 from "../assets/NDG4.png";
-import placeholder1 from "../assets/projectPH1.png";
-import placeholder2 from "../assets/projectPH2.png";
+import ndg5 from "../assets/NDG5.png";
+import ndg6 from "../assets/NDG6.png";
+import ncGames2 from "../assets/NCGames2.png";
+import ncGames3 from "../assets/NCGames3.png";
+import ncGames4 from "../assets/NCGames4.png";
+import ncGames5 from "../assets/NCGames5.png";
+import ncGames6 from "../assets/NCGames6.png";
+import ncGames7 from "../assets/NCGames7.png";
 
 const Carousel = ({ images }) => {
   const [index, setIndex] = useState(0);
@@ -14,11 +21,11 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="relative w-full my-8">
-      <div className="w-full h-96 overflow-hidden">
+      <div className="w-full h-64 sm:h-80 md:h-96 overflow-hidden bg-[#0a0a0a] flex items-center justify-center">
         <img
           src={images[index]}
           alt={`slide ${index + 1}`}
-          className="w-full h-full object-cover"
+          className="max-w-full max-h-full object-contain"
         />
       </div>
       <div className="flex justify-between mt-2">
@@ -42,8 +49,8 @@ const Carousel = ({ images }) => {
   );
 };
 
-const ncGamesImages = [placeholder1, placeholder2];
-const noDiceGamesImages = [ndg1, ndg2, ndg3, ndg4];
+const ncGamesImages = [ncGames2, ncGames3, ncGames4, ncGames5, ncGames6, ncGames7];
+const noDiceGamesImages = [ndgLogo, ndg1, ndg2, ndg3, ndg4, ndg5, ndg6];
 
 export const NCGamesToNDG = () => {
   return (
@@ -53,55 +60,50 @@ export const NCGamesToNDG = () => {
         <h1 className="text-4xl font-bold border-b-4 border-[#2BA84A] pb-2 mb-2">
           From NC Games to No Dice Games
         </h1>
-        <p className="text-sm text-gray-400 mb-10">March 7, 2026</p>
+        <p className="text-sm text-gray-400 mb-10">March 16, 2026</p>
 
         <p className="mb-6 leading-relaxed">
-          The first rendition of my board games review website 'NC Games' looked like a frontend built by a backend developer. After getting my backend RESTful API up and running with a list of endpoints to check through developed with thorough testing and getting my head round SQL left joins and all that jazz, the prospect of designing a polished frontend for a user did not excite me. After all the backend work i wanted to get something functional to show it off, to show how it works and i didn't want to sit for hours thinking of design choices.
+        The first rendition of my board games review website 'NC Games' looked like a frontend built by a backend developer. After getting my backend RESTful API showing a list of endpoints and getting my head around SQL left joins and all that jazz, the prospect of designing a polished, responsive frontend for a user did not excite me. After all the backend work i wanted to get something functional to show the API off and how it works, i didn't want to sit for hours thinking up design choices.
         </p>
 
         <p className="mb-6 leading-relaxed">
-          NC Games colour choices were all over the shop, Black navbar with a white page body and then the comment sections for reviews have a full black background with red comment boxes ordered horizontally across the page. The login screen was orange and greeted the user with an oversized profile picture after a successful login. Overall there was no visual continuity in the theme between pages, was there even a theme? The review page featured cards that were dense with information but visually flat. The featured reviews homepage was basically empty, the single image carousel with a link didn't really give a varied landing experience of a site filled with exciting game reviews and multiple users.
+        NC Games' colour scheme was all over the shop. Black navbar with a disconnected white page body to start and then the comment sections for reviews had a full black background with red comment boxes, ordered horizontally across the page. The login screen was orange and greeted the user with an oversized profile picture after a successful login. It was totally jarring to look at and nothing flowed together. Was there even a coherent theme? The review page featured cards that were dense with information but visually flat. The featured reviews section of the homepage was basically empty, the single image carousel with a link didn't really give a welcoming landing experience.
         </p>
 
         <p className="mb-6 leading-relaxed">
-          NC Games was functional, but it had no personality or identity, i'm not sure it was even functional for mobile viewing. The logo itself wasn't too lacking, it had energy and character but none of that carried through to the rest of the UI. Coming back to the 'finished' product i knew something had to change. I wanted to take this 'functional' site and my hacked together job at understanding CSS and turn it into something calculated, considered and designed. I decided to port the whole project over to Vite and dip my toes into TailwindCSS, it was time to put some font-weight: 800 behind my fullstack developer title.
+        NC Games was functional, but it had no personality or identity. I'm not sure it was even functional for mobile viewing. The logo itself wasn't too shabby, it had energy and character, but none of that carried through to the rest of the UI. Coming back to the 'finished' product i knew something had to change. I wanted to take this functional site and my hacked together job at understanding basic CSS and turn it into something considered, designed and polished. I decided to port the whole project over to Vite and dip my toes into Tailwind CSS, it was time to put some <span className="font-extrabold">-weight: 800</span> behind my fullstack developer title.
         </p>
 
         <Carousel images={ncGamesImages} />
 
         <p className="mb-6 leading-relaxed">
-          First and foremost i wanted to rebrand the website. Northcoders Games still had some of that bootcamp fuzz stuck to it. I wanted something personal, something unique. I knew I wanted dice in the logo. So, envisioning the most disappointing outcome in my mind. Snake eyes! No Dice Games slithered into existence.
+        First and foremost i wanted to rebrand the website. Northcoders Games still had some of that bootcamp fuzz stuck to it. I wanted something personal, something unique. I also knew I wanted dice in the logo. So, envisioning the most disappointing outcome in my mind - snake eyes - No Dice Games slithered into existence.
         </p>
 
         <p className="mb-6 leading-relaxed">
-          I already had a primary colour of orange, but there was still scheming to be done. Around this i envisioned creams, greys, blacks and browns colours, all warm in tone to compliment the orange well. So i took my time using COOLORS and REALTIME COLORS to refine this palette two in browser tools i recommend as a starting point for any palette creation.
+        I had my sights set on orange being the primary palette colour, but there was still scheming to be done. Complementing this, i envisioned warm creams, greys, blacks and browns. I took my time using <a href="https://coolors.co/" target="_blank" rel="noreferrer" className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200">Coolors</a> and <a href="https://www.realtimecolors.com/?colors=050315-fbfbfe-2f27ce-dedcff-433bff&fonts=Inter-Inter" target="_blank" rel="noreferrer" className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200">Realtime Colors</a> to refine this palette.
         </p>
 
         <p className="mb-6 leading-relaxed">
-          With the palette locked in i went to creating the logo for the website, something simple and memorable, snake eyes dice in orange with the adjacent lettering, this move enabled me to shorten the logo to just the iconic dice which i later used for a favicon and a footer logo. When designing the logo i wanted it to be simple primarily as i wanted to dip my toe into SVGs (Scalable Vector Graphics), when using icons for websites in the past i had seen the term being tossed around. Some issues with NC Games were the logo losing quality if users were to zoom in, i figured that learning how to convert my own logos into an svg format and get it working would be a totally versatile move as it can be redrawn by the frontend wherever i want to use it with lossless quality. It also makes the logo just code under the hood, so there's no image files needed. I'd first sort out my logo as a simple png and convert it to an SVG then use{" "}
+        I wanted the new logo to be simple, memorable and work as a standalone icon as well as with accompanying text. The snake eyes dice reflected the name in motion, clean and minimal. Although the previous NC Games logo had its own charm, it bothered me that as a static image it would render blurry when zooming in. I'd seen the term SVG (Scalable Vector Graphics) knocking about online and I wanted to see what all the fuss was about. After converting the new logo using{" "}
           <a
             href="https://nikitahl.github.io/svg-2-code/"
             target="_blank"
             rel="noreferrer"
-            className="text-[#2BA84A] underline hover:text-[#248232] transition-colors duration-200"
+            className="text-[#2BA84A] hover:text-[#248232] transition-colors duration-200"
           >
-            this website
-          </a>{" "}
-          to get the code. Once i had the SVG code i was able to play around with it and split it up find out which parts were drawing what in my logo. So i could split it and use just the dice drawing part without the font for my footer. Being happy with my logo i went further to find some simple animated svg's to use rotating dice for my loading screen which i'm pretty proud of.
+            this tool
+          </a>, I could see that the image was now just code - drawing instructions rendered losslessly and redrawn on the page at any size. This piqued my interest, so i started splitting the instructions apart until i could separate the dice icon from the text, giving me a shortened version to use in the footer and as a favicon. I took the logo further, finding some animated SVGs for a rotating dice loading screen which i'm pretty chuffed with.
         </p>
 
         <p className="mb-6 leading-relaxed">
-          With the new colour scheme being ironclad and so much more uniform than NC Games. I wanted to have a stab at adding a Darkmode/Lightmode option, something i've never added to a website before. Using tailwind's ability to reference a saved theme in all files looked fantastic. Enabled me to have my theme tucked away in a root file that can then be referenced everywhere else.
-        </p>
-
-        <p className="mb-6 leading-relaxed">
-          All the theme colours are defined in an <code className="bg-[#2D3A3A] px-1 py-0.5 text-sm">@theme</code> block in <code className="bg-[#2D3A3A] px-1 py-0.5 text-sm">index.css</code>. Each component throughout the website uses CSS that has both light and dark stylings written into it, for example: <code className="bg-[#2D3A3A] px-1 py-0.5 text-sm">bg-brandLight dark:bg-brandDark</code>. When clicking the darkmode toggle button in the navbar the 'dark' class is added or removed from the top of the main <code className="bg-[#2D3A3A] px-1 py-0.5 text-sm">&lt;html&gt;</code> document the website is loaded inside, therefore the dark: variant only kicks in when the dark class is on the html tag. This enabled me to toggle this easily across both mobile and desktop versions of the site.
+          Up until this rebrand i'd never added dark mode to a frontend before. However, the colour palette i had created made dark mode functionality feel like a natural next step. I expected such a feature to involve a convoluted passing of styling state down through every affected component. The reality of using Tailwind was far more elegant. The dark mode toggling all hinges on one class changing inside the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">&lt;html&gt;</code> tag in the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">index.html</code> file. All the theme colours are defined in an <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">@theme</code> block in <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">index.css</code>. Each component throughout the website uses CSS that has both light and dark stylings written into it, for example: <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">bg-brandLight dark:bg-brandDark</code>. When clicking the dark mode button in the navbar the <code className="bg-[#1a3a2a] px-1 py-0.5 text-sm">dark</code> class is added or removed. What i expected to be the most complex part of the overhaul ended up being one of the most satisfying to implement.
         </p>
 
         <Carousel images={noDiceGamesImages} />
 
         <p className="mb-6 leading-relaxed">
-          All in all i'm really proud of this frontend overhaul i've learned plenty transferrable UI styling skills to take to future projects and push further. This had been the first blog post i've written ever let alone software development related. It's a start to improve from, onwards and upwards.
+        All in all, this overhaul has taught me a lot more than I expected. SVG manipulation, Tailwind dark mode and thinking about colour as a whole palette rather than choices in isolation now sit snug in my frontend bag of tricks. My dev blog has now been christened with my first blog post ever written, technical or otherwise. Coming up i'll be going into detail about my war on Blazor WebAssembly and finding out if we can really get my C# text-based RPG running in browser. Could you get the chance to be a potential crypt-stalking adventurer? We shall see...
         </p>
 
       </div>
