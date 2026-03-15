@@ -1,6 +1,7 @@
 import React from 'react'
-import { BiSolidDownArrow } from "react-icons/bi";
+import { BiSolidDownArrow, BiSolidRightArrow } from "react-icons/bi";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 
 const shuffleArray = (array) => {
@@ -28,7 +29,7 @@ export const Home = () => {
 
   return (
     <div name='home' id='home' className='w-full h-screen bg-[#040F0F]'>
-        
+
 
   {/* container */}
   <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
@@ -42,19 +43,25 @@ export const Home = () => {
             backSpeed={140}
             loop
             />
-            
+
     <p className='text-[#FCFFFC] py-4 max-w-[700px]'></p>
-    <div>
+    <div className='flex gap-4'>
 
     <Link to="projects" smooth={true} duration={500}>
-    <button className='text-[#FCFFFC] group border-2  px-6 py-3 flex items-center hover:bg-[#2BA84A] hover:border-[#2BA84A] duration-300'>View Work 
+    <button className='text-[#FCFFFC] group border-2 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base flex items-center hover:bg-[#2BA84A] hover:border-[#2BA84A] duration-300'>View Work
     <span className='group-hover:animate-ping duration-100'>
     <BiSolidDownArrow className='ml-2' />
     </span>
     </button>
     </Link>
-    
 
+    <RouterLink to="/blog">
+    <button className='text-[#FCFFFC] group border-2 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base flex items-center hover:bg-[#2BA84A] hover:border-[#2BA84A] duration-300'>Dev Blog
+    <span className='group-hover:animate-ping duration-100'>
+    <BiSolidRightArrow className='ml-2' />
+    </span>
+    </button>
+    </RouterLink>
 
 </div>
   </div>
