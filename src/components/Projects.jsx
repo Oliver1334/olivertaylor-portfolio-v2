@@ -28,7 +28,7 @@ export const Projects = () => {
               className="absolute top-4 left-[-40px] rotate-[-45deg] bg-emerald-400 text-black text-xs font-bold shadow-lg flex items-center justify-center px-14 py-2"
               style={{ transform: "translate(-5px, 10px) rotate(-45deg)" }}
             >
-              Refining UI
+              Updated UI
             </div>
             {/* Image */}
             <div className="p-2">
