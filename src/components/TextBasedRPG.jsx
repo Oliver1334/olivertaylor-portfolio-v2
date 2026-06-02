@@ -64,15 +64,15 @@ export const TextBasedRPG = () => {
           {/* body and img div */}
           <div className="flex flex-col md:flex-row md:items-center pb-4 pt-4 md:py-6 ">
             <div className="flex flex-col w-full md:w-1/2">
-              <p className="md:pb-12 pb-4">
+              <p className="pb-4">
                 A text-based role-playing game built in C# and played in the
                 console, featuring turn-based combat, character progression, and
-                minimal ASCII art for a classic text-adventure feel. Players can
+                minimal ASCII art in homage to classic text adventure games. Players can
                 explore, battle enemies, and grow stronger through an
-                interactive story loop that captures the retro RPG experience.
-                Future development aims to bring the game to the browser using
-                Blazor WebAssembly, making it accessible directly online without
-                downloads.
+                interactive story loop.
+              </p>
+              <p className="pb-4">
+                As part of developing this, I have been working on emulating a console terminal in the browser using Blazor WebAssembly, replicating keyboard input, sequential text output, and menu navigation. A working demo of a small paint drying simulator console app is available below. Be warned, you may have as much fun as watching <strong>real</strong> paint dry...
               </p>
 
               <footer>
@@ -116,7 +116,15 @@ export const TextBasedRPG = () => {
           </div>
           {/* buttons */}
           <div className="flex flex-row justify-center md:justify-start space-x-4 md:gap-6 lg:pt-8 md:pt-8 pt-12">
-            {/* button go here */}
+            <a
+              href="https://paint-drying-sim.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="text-center mb-2 hover:bg-[#2BA84A] hover:border-[#2BA84A] duration-300 text-[#FCFFFC] group border-2 px-6 py-3 flex">
+                Paint Drying Sim
+              </button>
+            </a>
           </div>
         </div>
       </div>
